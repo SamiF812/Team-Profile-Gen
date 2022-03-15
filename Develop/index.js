@@ -66,7 +66,7 @@ function appMenu() {
         },
         {
           type: 'input',
-          name: 'managerOffice',
+          name: 'managerOfficeNumber',
           message: "What is the team manager's office number?",
           validate: (answer) => {
             if (answer !== '') {
@@ -79,7 +79,7 @@ function appMenu() {
         // TODO: YOUR CODE HERE:
         // CREATE REST OF QUESTIONS HERE FOR MANAGER
         // Strongly recommend to add validate property function for id and email
-        // done?
+        // Completed 3/15
       ])
       .then((answers) => {
         const manager = new Manager(
@@ -124,7 +124,7 @@ function appMenu() {
  
         // TODO: YOUR CODE HERE
         // CREATE OBJECTS OF QUESTIONS FOR ENGINEER
-        // done?
+        // completed 3/15
   function addEngineer() {
     inquirer
       .prompt([
@@ -182,7 +182,7 @@ function appMenu() {
         //    TO THE ENGINEER CLASS CONSTRUCTOR
         // 2. ADD (PUSH) THE ENGINEER VARIABLE TO the teamMembers ARRAY
         // 3. ADD (PUSH) THE ENGINERR ID TO THE idArray ARRAY
-        // Done?
+        // Completed 3/15
         const engineer = new Engineer(
           answers.engineerName,
           answers.engineerId,
@@ -201,7 +201,7 @@ function appMenu() {
         //
         // TODO: YOUR CODE HERE
         // CREATE OBJECTS OF QUESTIONS FOR INTERN
-        // done?
+        // Completed 3/15
         {
           type: 'input',
           name: 'internName',
@@ -254,7 +254,7 @@ function appMenu() {
         //    TO THE INTERN CLASS CONSTRUCTOR
         // 2. ADD (PUSH) THE INTERN VARIABLE TO the teamMembers ARRAY
         // 3. ADD (PUSH) THE INTERN ID TO THE idArray ARRAY
-        // done?
+        // Completed 3/15
 
         const intern = new Intern(
           answers.internName,
