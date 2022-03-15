@@ -42,11 +42,44 @@ function appMenu() {
             return 'Please enter at least one character.';
           },
         },
+        {
+          type: 'input',
+          name: 'managerId',
+          message: "What is the team manager's ID?",
+          validate: (answer) => {
+            if (answer !== '') {
+              return true;
+            }
+            return 'Please enter at least one character.';
+          },
+        },
+        {
+          type: 'input',
+          name: 'managerEmail',
+          message: "What is the team manager's email?",
+          validate: (answer) => {
+            if (answer !== '') {
+              return true;
+            }
+            return 'Please enter at least one character.';
+          },
+        },
+        {
+          type: 'input',
+          name: 'managerOffice',
+          message: "What is the team manager's office number?",
+          validate: (answer) => {
+            if (answer !== '') {
+              return true;
+            }
+            return 'Please enter at least one character.';
+          },
+        },
         //
         // TODO: YOUR CODE HERE:
         // CREATE REST OF QUESTIONS HERE FOR MANAGER
         // Strongly recommend to add validate property function for id and email
-        //
+        // done?
       ])
       .then((answers) => {
         const manager = new Manager(
@@ -88,14 +121,59 @@ function appMenu() {
         }
       });
   }
-
+ 
+        // TODO: YOUR CODE HERE
+        // CREATE OBJECTS OF QUESTIONS FOR ENGINEER
+        // done?
   function addEngineer() {
     inquirer
       .prompt([
-        //
-        // TODO: YOUR CODE HERE
-        // CREATE OBJECTS OF QUESTIONS FOR ENGINEER
-        //
+        {
+          type: 'input',
+          name: 'engineerName',
+          message: "What is the engineer's name?",
+          validate: (answer) => {
+            if (answer !== '') {
+              return true;
+            }
+            return 'Please enter at least one character.';
+          },
+        },
+        {
+          type: 'input',
+          name: 'engineerId',
+          message: "What is the engineer's ID?",
+          validate: (answer) => {
+            if (answer !== '') {
+              return true;
+            }
+            return 'Please enter at least one character.';
+          },
+        },
+        {
+          type: 'input',
+          name: 'engineerEmail',
+          message: "What is the engineer's Email?",
+          validate: (answer) => {
+            if (answer !== '') {
+              return true;
+            }
+            return 'Please enter at least one character.';
+          },
+        },
+        {
+          type: 'input',
+          name: 'engineerGithub',
+          message: "What is the engineer's GitHub username?",
+          validate: (answer) => {
+            if (answer !== '') {
+              return true;
+            }
+            return 'Please enter at least one character.';
+          },
+        },
+        
+        
       ])
       .then((answers) => {
         //
@@ -104,8 +182,15 @@ function appMenu() {
         //    TO THE ENGINEER CLASS CONSTRUCTOR
         // 2. ADD (PUSH) THE ENGINEER VARIABLE TO the teamMembers ARRAY
         // 3. ADD (PUSH) THE ENGINERR ID TO THE idArray ARRAY
-        //
-
+        // Done?
+        const engineer = new Engineer(
+          answers.engineerName,
+          answers.engineerId,
+          answers.engineerEmail,
+          answers.engineerGithub
+        );
+          teamMembers.push(engineer);
+          idArray.push(answers.engineerId);
         createTeam();
       });
   }
@@ -116,7 +201,51 @@ function appMenu() {
         //
         // TODO: YOUR CODE HERE
         // CREATE OBJECTS OF QUESTIONS FOR INTERN
-        //
+        // done?
+        {
+          type: 'input',
+          name: 'internName',
+          message: "What is the intern's name?",
+          validate: (answer) => {
+            if (answer !== '') {
+              return true;
+            }
+            return 'Please enter at least one character.';
+          },
+        },
+        {
+          type: 'input',
+          name: 'internId',
+          message: "What is the intern's ID?",
+          validate: (answer) => {
+            if (answer !== '') {
+              return true;
+            }
+            return 'Please enter at least one character.';
+          },
+        },
+        {
+          type: 'input',
+          name: 'internEmail',
+          message: "What is the intern's Email?",
+          validate: (answer) => {
+            if (answer !== '') {
+              return true;
+            }
+            return 'Please enter at least one character.';
+          },
+        },
+        {
+          type: 'input',
+          name: 'internSchool',
+          message: "What is the intern's School?",
+          validate: (answer) => {
+            if (answer !== '') {
+              return true;
+            }
+            return 'Please enter at least one character.';
+          },
+        },
       ])
       .then((answers) => {
         //
@@ -125,7 +254,16 @@ function appMenu() {
         //    TO THE INTERN CLASS CONSTRUCTOR
         // 2. ADD (PUSH) THE INTERN VARIABLE TO the teamMembers ARRAY
         // 3. ADD (PUSH) THE INTERN ID TO THE idArray ARRAY
-        //
+        // done?
+
+        const intern = new Intern(
+          answers.internName,
+          answers.internId,
+          answers.internEmail,
+          answers.internSchool,
+        );
+        teamMembers.push(intern);
+        idArray.push(answers.internId);
         createTeam();
       });
   }
