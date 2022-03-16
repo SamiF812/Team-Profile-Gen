@@ -3,9 +3,12 @@
 ## Links
 Github Repo: https://github.com/SamiF812/Team-Profile-Gen
 
-Demo Link: 
+Demo Link: https://youtu.be/rLnT85mmn9M
 
 ## Screenshots 
+
+![shot1](./Assets/images/nodeshot.png)
+![shot2](./Assets/images/teamcards.png)
 
 
 ## Description
